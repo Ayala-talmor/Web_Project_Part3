@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DogPlay - Home</title>
+
+  <!-- Global stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Site header -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <img src="images/logo.jpg" alt="DogPlay Logo" class="logo">
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="dog_profile.html">Post an Ad</a>
+        <a href="matches.html">Find a Playmate</a>
+        <a id="menu-login" href="login.html">Login</a>
+      </nav>
+
+      <!-- User info shown only when logged in -->
+      <div class="user-info" id="userInfo" style="display: none;">
+        <span id="login-status-icon" title="Login status">🔴</span>
+        <span id="greeting"></span>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <h1>Because Every Dog Deserves a Friend.</h1>
+    <p>Connect your dog with new friends and local playdates!</p>
+    <a href="#" id="find-playmates-btn" class="cta-button pulse"
+      style="background:#E74C3C;padding:13px 38px;font-size:1.15em;border-radius:30px;color:#fff;font-weight:600;box-shadow:0 4px 10px rgba(0,0,0,0.10);">
+      Find Playmates</a>
+  </section>
+
+  <!-- How it Works section -->
+  <section id="how-it-works" style="padding:40px 0 20px 0;background:#f9fafb;">
+    <h2 style="text-align:center;margin-bottom:28px;">How it Works</h2>
+    <div class="how-steps">
+      <div class="step">
+        <div class="step-icon">📝</div>
+        <h3>Sign Up</h3>
+        <p>Create your free account in seconds.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">🐕</div>
+        <h3>Create Dog Profile</h3>
+        <p>Add your dog’s details and photo to meet new friends.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">🤝</div>
+        <h3>Get Matches</h3>
+        <p>Browse and connect with friendly dogs near you!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us section -->
+  <section id="about-us" class="about-section">
+    <h2>About Us</h2>
+    <p>
+      <b>DogPlay</b> is more than just a playdate platform—it's a community. Our mission is to create fun, safe, and
+      friendly connections for dogs and their humans.
+      We believe every dog deserves a happy, active social life!
+    </p>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <div class="social-icons">
+      <a href="https://facebook.com/" target="_blank" title="Facebook">
+        <img src="images/fb_logo.jpeg" alt="Facebook" style="height: 24px; vertical-align: middle;">
+      </a>
+      <a href="https://instagram.com/" target="_blank" title="Instagram">
+        <img src="images/insta_logo.jpeg" alt="Instagram" style="height: 24px; vertical-align: middle;">
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="#" id="terms-link">Terms of Service</a> |
+      <a href="#" id="privacy-link">Privacy Policy</a>
+    </div>
+    <p style="margin-top:12px;">© 2025 DogPlay | Connecting Happy Dogs</p>
+  </footer>
+
+  <!-- Load external JavaScript -->
+  <script src="home.js"></script>
+</body>
+
+</html>

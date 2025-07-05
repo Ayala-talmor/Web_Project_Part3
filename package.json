@@ -1,0 +1,20 @@
+{
+  "name": "part-3",
+  "version": "1.0.0",
+  "main": "dog_profile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Group 19 part 3 of the project",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "mysql2": "^3.14.1",
+    "nodemailer": "^7.0.4"
+  }
+}

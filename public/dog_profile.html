@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Post an Ad</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="dog_profile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Message shown if user is not logged in -->
+  <div id="unauthorized-message" style="display: none; text-align: center; padding: 40px;">
+    <h2>You must be logged in to post an ad</h2>
+    <p><a href="login.html">Click here to log in or sign up</a></p>
+  </div>
+
+  <!-- Main content visible only when user is logged in -->
+  <div id="main-content" style="display: none;">
+
+    <!-- Header with logo and navigation -->
+    <header class="site-header">
+      <div class="container header-flex">
+        <img src="images/logo.jpg" alt="DogPlay Logo" class="logo">
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="dog_profile.html" class="active">Post an Ad</a>
+          <a href="matches.html">Find a Playmate</a>
+          <a id="menu-login" href="login.html">Login</a>
+        </nav>
+
+        <!-- User greeting section: shown only if logged in -->
+        <div class="user-info" id="userInfo" style="display: none;">
+          <span id="login-status-icon" title="Login status">🔴</span>
+          <span id="greeting"></span>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Page heading -->
+    <section class="hero">
+      <h1>Post a New Playdate Ad</h1>
+      <p>Let others find your dog's next best friend!</p>
+    </section>
+
+    <!-- Dog form section -->
+    <section class="filter-section">
+      <form id="dogForm" enctype="multipart/form-data">
+        <label>Name:
+          <input type="text" name="name" required placeholder="Dog's name">
+        </label>
+
+        <label>Breed:
+          <input type="text" name="breed" required placeholder="e.g. Labrador">
+        </label>
+
+        <label>Age:
+          <input type="number" name="age" min="0" required placeholder="e.g. 3">
+        </label>
+
+        <label>Gender:
+          <select name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </label>
+
+        <label>Size:
+          <select name="size" required>
+            <option value="">Select</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </label>
+
+        <label>Energy Level:
+          <select name="energy_level" required>
+            <option value="">Select</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </label>
+
+        <label>City:
+          <select name="city" required>
+            <option value="">Select City</option>
+            <option>Tel Aviv</option>
+            <option>Herzliya</option>
+            <option>Jerusalem</option>
+            <option>Haifa</option>
+            <option>Rishon LeZion</option>
+            <option>Petah Tikva</option>
+            <option>Netanya</option>
+            <option>Be'er sheba</option>
+            <option>Holon</option>
+          </select>
+        </label>
+
+        <label>Upload Dog Image:
+          <input type="file" name="image" accept="image/*" required>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" name="action" value="add-another" class="secondary-btn">Add Another Dog</button>
+          <button type="submit" name="action" value="finish" class="primary-btn">Finish and Go to Matches</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="site-footer">
+      <div class="social-icons">
+        <a href="https://facebook.com/" target="_blank" title="Facebook">
+          <img src="images/fb_logo.jpeg" alt="Facebook" style="height: 24px; vertical-align: middle;">
+        </a>
+        <a href="https://instagram.com/" target="_blank" title="Instagram">
+          <img src="images/insta_logo.jpeg" alt="Instagram" style="height: 24px; vertical-align: middle;">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#" id="terms-link">Terms of Service</a> |
+        <a href="#" id="privacy-link">Privacy Policy</a>
+      </div>
+      <p style="margin-top:12px;">© 2025 DogPlay | Connecting Happy Dogs</p>
+    </footer>
+
+    <!-- Load external JavaScript -->
+    <script src="dog_profile.js"></script>
+</body>
+
+</html>

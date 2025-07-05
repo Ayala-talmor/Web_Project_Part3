@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Find a Playmate</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="matches.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header with logo and navigation -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <img src="images/logo.jpg" alt="DogPlay Logo" class="logo">
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="dog_profile.html">Post an Ad</a>
+        <a href="matches.html" class="active">Find a Playmate</a>
+        <a id="menu-login" href="login.html">Login</a>
+      </nav>
+
+      <!-- User greeting and logout section (shown only if logged in) -->
+      <div class="user-info" id="userInfo" style="display: none;">
+        <span id="login-status-icon" title="Login status">🔴</span>
+        <span id="greeting"></span>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <h1>Find the Perfect Playmate for Your Dog</h1>
+    <p>Search for fun, friendly dogs near you</p>
+  </section>
+
+  <!-- Filter section -->
+  <section class="filter-section">
+    <form class="filter-form">
+      <label>City:
+        <select name="city" id="city-filter">
+          <option value="">Any</option>
+        </select>
+      </label>
+      <label>Size:
+        <select name="size">
+          <option value="">Any</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+      </label>
+      <label>Gender:
+        <select name="gender">
+          <option value="">Any</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </label>
+      <label>Energy:
+        <select name="energy">
+          <option value="">Any</option>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+      </label>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <!-- Ads display section -->
+  <section id="ads-section">
+    <div class="ads-wrapper">
+      <h2>My Ads</h2>
+      <button id="toggle-my-ads" class="secondary-btn">Hide My Ads</button>
+      <div id="my-ads" class="ads-grid"></div>
+      <h2>Other Dogs Near You</h2>
+      <div id="other-ads" class="ads-grid"></div>
+    </div>
+
+    <div id="no-ads" class="no-ads" style="display: none;">
+      <p>😕 No playdate ads found.</p>
+      <p>You can <a href="dog_profile.html">post an ad</a> and your dog's new best friend might show up soon! 🐶</p>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <div class="social-icons">
+      <a href="https://facebook.com/" target="_blank" title="Facebook">
+        <img src="images/fb_logo.jpeg" alt="Facebook" style="height: 24px; vertical-align: middle;">
+      </a>
+      <a href="https://instagram.com/" target="_blank" title="Instagram">
+        <img src="images/insta_logo.jpeg" alt="Instagram" style="height: 24px; vertical-align: middle;">
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="#" id="terms-link">Terms of Service</a> |
+      <a href="#" id="privacy-link">Privacy Policy</a>
+    </div>
+    <p style="margin-top:12px;">© 2025 DogPlay | Connecting Happy Dogs</p>
+  </footer>
+
+  <!-- Load external JavaScript -->
+  <script src="matches.js"></script>
+
+</body>
+
+</html>

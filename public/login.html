@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - DogPlay</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Header with navigation -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <img src="images/logo.jpg" alt="DogPlay Logo" class="logo">
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="dog_profile.html">Post an Ad</a>
+        <a href="matches.html">Find a Playmate</a>
+        <a href="login.html" class="active">Login</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Login form section -->
+  <section class="login-section" id="authSection">
+    <form id="loginForm" class="login-form">
+      <h2>Welcome Back</h2>
+
+      <label>Email
+        <input type="email" name="email" id="loginEmail" required placeholder="you@example.com" />
+      </label>
+
+      <label>Password
+        <input type="password" name="password" id="loginPassword" required placeholder="Enter your password" />
+      </label>
+
+      <button type="submit" class="primary-btn">Login</button>
+
+      <p class="form-options">
+        <a href="#" id="show-forgot">Forgot password?</a>
+      </p>
+
+      <p class="switch-form">
+        Don't have an account?
+        <a href="#" id="show-signup">Sign up here</a>
+      </p>
+    </form>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <div class="social-icons">
+      <a href="https://facebook.com/" target="_blank" title="Facebook">
+        <img src="images/fb_logo.jpeg" alt="Facebook" style="height: 24px; vertical-align: middle;">
+      </a>
+      <a href="https://instagram.com/" target="_blank" title="Instagram">
+        <img src="images/insta_logo.jpeg" alt="Instagram" style="height: 24px; vertical-align: middle;">
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="#" id="terms-link">Terms of Service</a> |
+      <a href="#" id="privacy-link">Privacy Policy</a>
+    </div>
+    <p style="margin-top:12px;">© 2025 DogPlay | Connecting Happy Dogs</p>
+  </footer>
+
+  <!-- Signup modal -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <span class="close" id="close-signup">&times;</span>
+      <form id="signupForm" class="signup-form">
+        <h2>Create an Account</h2>
+
+        <label>First Name
+          <input type="text" name="firstName" required placeholder="Your first name" />
+        </label>
+
+        <label>Last Name
+          <input type="text" name="lastName" required placeholder="Your last name" />
+        </label>
+
+        <label>Email
+          <input type="email" name="email" required placeholder="you@example.com" />
+        </label>
+
+        <label>Password
+          <input type="password" name="password" required placeholder="Choose a password" />
+        </label>
+
+        <label>Phone Number
+          <input type="tel" name="phone" required pattern="^05\d{8}$" placeholder="0501234567"
+            title="Phone number must start with 05 and include 10 digits total (0501234567)" />
+        </label>
+
+        <button type="submit" class="primary-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Forgot password modal -->
+  <div class="modal" id="forgotModal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" id="close-forgot">&times;</span>
+      <form id="forgotForm" class="forgot-form">
+        <h2>Reset Your Password</h2>
+
+        <!-- Message if email is not found -->
+        <p id="forgotMessage" style="color: red; font-size: 14px; display: none; margin-bottom: 10px;"></p>
+
+        <label>Enter your email address:
+          <input type="email" name="forgotEmail" required placeholder="you@example.com" />
+        </label>
+        <button type="submit" class="primary-btn">Send Reset Link</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Reset password modal -->
+<div class="modal" id="resetPasswordModal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" id="close-reset">&times;</span>
+    <form id="resetPasswordForm" class="reset-form">
+      <h2>Set New Password</h2>
+      
+      <label>Email
+        <input type="email" id="resetEmail" required readonly />
+      </label>
+
+      <label>New Password
+        <input type="password" id="newPassword" required placeholder="Enter new password" />
+      </label>
+
+      <button type="submit" class="primary-btn">Update Password</button>
+    </form>
+  </div>
+</div>
+
+  <!-- Load external JavaScript -->
+  <script src="login.js"></script>
+
+</body>
+
+</html>

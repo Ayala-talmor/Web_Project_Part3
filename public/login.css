@@ -1,0 +1,105 @@
+/* login.css – Page-specific styles for login and signup modals */
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 72vh;
+  background: transparent;
+}
+
+.login-form,
+.signup-form,
+.forgot-form {
+  background-color: #fff;
+  padding: 36px 30px 24px 30px;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(44, 62, 80, 0.08);
+  min-width: 330px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.login-form h2,
+.signup-form h2,
+.forgot-form h2 {
+  margin-bottom: 12px;
+  font-size: 1.45em;
+  color: #2C3E50;
+  text-align: center;
+}
+
+.form-options,
+.signup-prompt {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.form-options a,
+.signup-prompt a {
+  color: #E74C3C;
+  text-decoration: underline;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.form-options a:hover,
+.signup-prompt a:hover {
+  color: #4CAF50;
+}
+
+/* Styles for signup modal window */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(44, 62, 80, 0.18);
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 18px rgba(44, 62, 80, 0.13);
+  padding: 35px 30px 20px 30px;
+  min-width: 330px;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  font-size: 22px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #E74C3C;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+
+  .login-form,
+  .signup-form,
+  .forgot-form,
+  .modal-content {
+    min-width: 98vw;
+    max-width: 99vw;
+    padding: 22px 8vw 16px 8vw;
+  }
+}

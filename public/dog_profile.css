@@ -1,0 +1,46 @@
+/* dog_profile.css – Specific styles for Post an Ad form */
+
+.filter-section {
+  background: #ffffff;
+  padding: 30px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+#dogForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Highlight valid/invalid fields on submit */
+.was-validated input:invalid,
+.was-validated select:invalid {
+  border-color: red;
+}
+
+.was-validated input:valid,
+.was-validated select:valid {
+  border-color: green;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .filter-section {
+    padding: 20px 15px;
+    margin: 20px 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

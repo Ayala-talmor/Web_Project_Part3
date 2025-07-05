@@ -1,0 +1,228 @@
+/* styles.css – Global and shared styles for DogPlay website */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Base body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f8f9fa, #e0f7fa);
+  color: #333;
+}
+
+/* Headings (h1–h3) */
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Basic link styling */
+a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: 500;
+}
+
+/* General container for consistent layout */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Header styles */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Header layout using Flexbox */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Logo styles */
+.logo {
+  height: 70px;
+  max-height: 80px;
+  margin-left: 10px;
+  margin-right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation links */
+.main-nav a {
+  margin-left: 20px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+  color: #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(to right, #6EC6FF, #4CAF50);
+  color: white;
+  text-align: center;
+  padding: 60px 30px;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  opacity: 0.95;
+}
+
+/* User info display (Hi, User! and logout button) */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.user-info button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.user-info button:hover {
+  background-color: #d32f2f;
+}
+
+.user-info span {
+  white-space: nowrap; /* Prevent line break in "Hi, User!" */
+}
+
+/* Footer styles */
+.site-footer {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 50px;
+}
+
+/* Default button styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388E3C;
+}
+
+/* Basic form field styling */
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Shared label styles */
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 6px;
+}
+
+/* Focus styles for inputs */
+input:focus,
+select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Layout for form buttons */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+  .header-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .dog-card {
+    width: 100%;
+  }
+
+  .filter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+/* Ensure full phrase "Find a Playmate" stays on one line in navigation menu */
+.main-nav a[href*="matches.html"] {
+  white-space: nowrap; /* Prevent "Find a Playmate" from breaking */
+}
